@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "12b94d90-4da3-4ae6-8033-fdfce1779891",
+		"name": "Desafio X-Brain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48655089"
+	},
+	"item": [
+		{
+			"name": "Buscar Vendas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/vendas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vendas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estatisticas Vendedores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/vendas/vendedores/estatisticas?dataInicio=2025-09-21&dataFim=2025-09-21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vendas",
+						"vendedores",
+						"estatisticas"
+					],
+					"query": [
+						{
+							"key": "dataInicio",
+							"value": "2025-09-21"
+						},
+						{
+							"key": "dataFim",
+							"value": "2025-09-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Venda",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"dataVenda\": \"2025-09-21\",\r\n        \"valor\": 500.00,\r\n        \"vendedorId\": 3,\r\n        \"vendedorNome\": \"Joao\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/vendas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vendas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
